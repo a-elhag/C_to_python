@@ -17,7 +17,10 @@
 
 
 /*********** First Whatchamacallit ***********/
-/* This fellow is the start of everything    */
+/* This fellow is the start of everything:   */
+/* --> Takes in imports from Python          */
+/* --> Does "stuff"                          */
+/* --> Returns said "stuff" to Python        */
 /*                                           */
 /* It gives to the Second Whatchamacallit:   */
 /* --> `method_fputs`                        */
