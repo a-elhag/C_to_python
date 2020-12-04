@@ -1,19 +1,20 @@
-#define PY_SSIZE_T_CLEAN
-#include <Python.h>
-
-/* These are automatically included in <Python.H>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h> */
-
 /*************** Introdution  ****************/
 /* Welcome, welcome, welcome!                */
 /*                                           */
 /* These lovely and not at all frustrating   */
-/* or confusing block are all needed.        */
+/* or confusing blocks are all needed.       */
 /*                                           */
 /* And I do mean ALL OF THEM!                */
 /*********************************************/
+
+#define PY_SSIZE_T_CLEAN /* This line is needed, so just put it. Always. */
+#include <Python.h> /* This one is where the magic happens */
+
+/* These are automatically included in <Python.h>
+ * #include <stdio.h>
+ * #include <stdlib.h>
+ * #include <unistd.h> */
+
 
 /*********** First Whatchamacallit ***********/
 /* This fellow is the start of everything    */
@@ -59,7 +60,7 @@ static PyMethodDef FputsMethods[] =
 {
     {"fputs", method_fputs, METH_VARARGS,
 		"Python interface for fputs C library function"},
-    {NULL, NULL, 0, NULL}
+    {NULL, NULL, 0, NULL} /* This one is called a sentinel */
 };
 
 
